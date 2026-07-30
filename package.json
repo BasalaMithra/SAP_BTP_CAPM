@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@sap/cds": "^9",
-    "sqlite": "^3.0.6"
+    "sqlite": "^5.1.1"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2.4"
