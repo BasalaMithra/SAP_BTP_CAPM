@@ -1,0 +1,13 @@
+GET http://localhost:4004/odata/v4/mithraservice/
+
+###Service metadata
+GET http://localhost:4004/odata/v4/mithraservice/$metadata
+
+###Read top 2 Employee
+GET http://localhost:4004/odata/v4/mithraservice/Employee?$top=2
+
+###Read Purchase orders
+GET http://localhost:4004/odata/v4/mithraservice/purchaseorder?$top=2
+
+###
+GET http://localhost:4004/CatalogService/

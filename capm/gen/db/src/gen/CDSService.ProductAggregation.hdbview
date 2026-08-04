@@ -1,0 +1,6 @@
+VIEW CDSService_ProductAggregation AS SELECT
+  CProductValueView_0.ProductId,
+  CProductValueView_0.Country,
+  CProductValueView_0.CurrencyCode,
+  CProductValueView_0.POGrossAmount
+FROM mithra_db_CDSViews_CProductValueView AS CProductValueView_0

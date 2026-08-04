@@ -1,0 +1,19 @@
+COLUMN TABLE mithra_db_Employee (
+  ID NVARCHAR(36) NOT NULL,
+  NODE_KEY NVARCHAR(33) NOT NULL,
+  nameFirst NVARCHAR(40),
+  nameMiddle NVARCHAR(40),
+  nameLast NVARCHAR(40),
+  nameInitials NVARCHAR(40),
+  sex NVARCHAR(1),
+  "LANGUAGE" NVARCHAR(1),
+  phoneNumber INTEGER,
+  email NVARCHAR(20),
+  loginName NVARCHAR(12),
+  currency_code NVARCHAR(6),
+  salaryAmount INTEGER,
+  accountNumber NVARCHAR(16),
+  bankId NVARCHAR(8),
+  bankName NVARCHAR(40),
+  PRIMARY KEY(ID, NODE_KEY)
+)

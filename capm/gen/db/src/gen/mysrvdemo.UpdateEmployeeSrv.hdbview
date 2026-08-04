@@ -1,0 +1,18 @@
+VIEW mysrvdemo_UpdateEmployeeSrv AS SELECT
+  Employee_0.ID,
+  Employee_0.NODE_KEY,
+  Employee_0.nameFirst,
+  Employee_0.nameMiddle,
+  Employee_0.nameLast,
+  Employee_0.nameInitials,
+  Employee_0.sex,
+  Employee_0."LANGUAGE",
+  Employee_0.phoneNumber,
+  Employee_0.email,
+  Employee_0.loginName,
+  Employee_0.currency_code,
+  Employee_0.salaryAmount,
+  Employee_0.accountNumber,
+  Employee_0.bankId,
+  Employee_0.bankName
+FROM mithra_db_Employee AS Employee_0

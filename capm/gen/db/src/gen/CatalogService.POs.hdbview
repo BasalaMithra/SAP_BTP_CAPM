@@ -1,0 +1,13 @@
+VIEW CatalogService_POs AS SELECT
+  purchaseorder_0.NODE_KEY,
+  purchaseorder_0.PO_ID,
+  purchaseorder_0.PARTNER_GUID_NODE_KEY,
+  purchaseorder_0.CURRENCY_CODE,
+  round(purchaseorder_0.GROSS_AMOUNT, 2) AS GROSS_AMOUNT,
+  purchaseorder_0.NET_AMOUNT,
+  purchaseorder_0.TAX_AMOUNT,
+  CASE purchaseorder_0.LIFECYCLE_STATUS WHEN 'N' THEN 'New' WHEN 'D' THEN 'Deliverd' WHEN 'B' THEN 'Blocked' END AS LIFECYCLE_STATUS,
+  purchaseorder_0.OVERALL_STATUS,
+  purchaseorder_0.NOTE,
+  CASE purchaseorder_0.LIFECYCLE_STATUS WHEN 'N' THEN 2 WHEN 'B' THEN 1 WHEN 'D' THEN 3 END AS Criticality
+FROM mithra_db_purchaseorder AS purchaseorder_0
