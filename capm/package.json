@@ -4,6 +4,7 @@
   "dependencies": {
     "@cap-js/hana": "^2",
     "@sap/cds": "^9",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
     "@sap/xsenv": "^6.2.1",
     "@sap/xssec": "^4.13.3",
     "hana": "^0.0.2",
@@ -36,18 +37,18 @@
     },
     "requires": {
       "uaa": {
-    "kind": "xsuaa"
+        "kind": "xsuaa"
       },
       "auth": {
         "[production]": {
           "strategy": "JWT"
         },
-        "[development]":{
+        "[development]": {
           "strategy": "mock",
           "users": {
             "mithra": {
               "roles": [
-                "Admin", 
+                "Admin",
                 "Viewer"
               ],
               "userAttributes": {
@@ -57,21 +58,18 @@
               }
             },
             "anitha": {
-              "roles": [ "Viewer"],
+              "roles": [
+                "Viewer"
+              ],
               "userAttributes": {
                 "BankName": [
                   "Axis Bank"
                 ]
               }
             }
-
           }
-
-        }
-
-      }
         }
       }
     }
- 
-
+  }
+}

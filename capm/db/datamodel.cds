@@ -1,5 +1,5 @@
 namespace mithra.db;
-using { cuid} from '@sap/cds/common';
+using { cuid, managed} from '@sap/cds/common';
 using {mithra.common} from './common';
 
 
@@ -59,20 +59,16 @@ entity product {
     HEIGHT         : Decimal;
     DIM_UNIT       : String(2);
 }
-entity purchaseorder {
+entity purchaseorder:common.Amount {
     key NODE_KEY     :Guid;
     PO_ID            : String(9);
     PARTNER_GUID     : association to db.businesspartner;
-    CURRENCY_CODE    : String(4);
-    GROSS_AMOUNT     : Decimal;
-    NET_AMOUNT       : Decimal;
-    TAX_AMOUNT       : Decimal;
     LIFECYCLE_STATUS : String(1);
     OVERALL_STATUS   : String(1);
     Items: association to many poitems on Items.PARENT_KEY = $self;
     NOTE:String(256);
 }
-entity poitems {
+entity poitems: common.Amount {
     key NODE_KEY   : Guid;
     PARENT_KEY     : association to purchaseorder;
     PO_ITEM_POS    : Integer;
@@ -82,8 +78,7 @@ entity poitems {
     NET_AMOUNT     : Decimal;
     TAX_AMOUNT     : Decimal;
 }
-entity Employee : cuid{
-    key NODE_KEY      : Guid;
+entity Employee : cuid, managed{
     nameFirst         : String(40);
     nameMiddle        : String(40);
     nameLast          : String(40);
