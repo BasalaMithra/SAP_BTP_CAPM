@@ -4,8 +4,20 @@ GET http://localhost:4004/CatalogService/
 GET http://localhost:4004/CatalogService/$metadata
 
 ###Read top 2 employee
-GET http://localhost:4004/CatalogService/EmployeeSet?$top=2
+PATCH http://localhost:4004/CatalogService/EmployeeSet/16161616-1616-1616-1616-161616161616
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "salaryAmount":"100000.45"
+}
 
 ###Read Purchase Order
 GET http://localhost:4004/CatalogService/POs?$top=2&$expand=Items,PARTNER_GUID
+
+###
+GET http://localhost:4004/CatalogService/EmployeeSet?$top=4
+
+###
+DELETE http://localhost:4004/CatalogService/EmployeeSet/16161616-1616-1616-1616-161616161616
+
 

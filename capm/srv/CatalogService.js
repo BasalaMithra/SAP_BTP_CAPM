@@ -4,9 +4,9 @@ module.exports = cds.service.impl( async function(){
     } = this.entities;
 
     this.before('UPDATE', EmployeeSet, (req,res) => {
-        console.log("aaya", req.data.salaryAmount);
-        if(parseFloat(req.data.salaryAmount) >= 1000000){
-            req.error(500, "salary must be below 1 mn");
+        console.log("high value", req.data.salaryAmount);
+        if(parseFloat(req.data.salaryAmount) >= 100000){
+            req.error(500, "salary must be below 1 million");
             //res.send("Dude, not allowed salary");
         }
     });
