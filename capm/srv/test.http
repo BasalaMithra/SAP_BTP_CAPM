@@ -15,9 +15,12 @@ Content-Type: application/json;IEEE754Compatible=true
 GET http://localhost:4004/CatalogService/POs?$top=2&$expand=Items,PARTNER_GUID
 
 ###
-GET http://localhost:4004/CatalogService/EmployeeSet?$top=4
+GET http://localhost:4004/CatalogService/EmployeeSet?$top=2
 
 ###
 DELETE http://localhost:4004/CatalogService/EmployeeSet/16161616-1616-1616-1616-161616161616
 
 
+###test locally with mock strategy
+GET http://localhost:4004/CatalogService/EmployeeSet/$count
+Authorization: Basic anitha:
