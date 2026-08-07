@@ -1,6 +1,9 @@
 COLUMN TABLE mithra_db_Employee (
   ID NVARCHAR(36) NOT NULL,
-  NODE_KEY NVARCHAR(33) NOT NULL,
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
   nameFirst NVARCHAR(40),
   nameMiddle NVARCHAR(40),
   nameLast NVARCHAR(40),
@@ -15,5 +18,5 @@ COLUMN TABLE mithra_db_Employee (
   accountNumber NVARCHAR(16),
   bankId NVARCHAR(8),
   bankName NVARCHAR(40),
-  PRIMARY KEY(ID, NODE_KEY)
+  PRIMARY KEY(ID)
 )

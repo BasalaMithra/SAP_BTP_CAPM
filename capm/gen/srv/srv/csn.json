@@ -1,0 +1,3704 @@
+{
+  "namespace": "mithra.db",
+  "definitions": {
+    "mithra.db.CDSViews": {
+      "kind": "context"
+    },
+    "mithra.db.CDSViews.POWorklist": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "mithra.db.purchaseorder"
+            ]
+          },
+          "columns": [
+            {
+              "key": true,
+              "ref": [
+                "PO_ID"
+              ],
+              "as": "PurchaseOrderId"
+            },
+            {
+              "ref": [
+                "PARTNER_GUID",
+                "BP_ID"
+              ],
+              "as": "PartnerId"
+            },
+            {
+              "ref": [
+                "PARTNER_GUID",
+                "COMPANY_NAME"
+              ],
+              "as": "CompanyName"
+            },
+            {
+              "ref": [
+                "GROSS_AMOUNT"
+              ],
+              "as": "POGrossAmount"
+            },
+            {
+              "ref": [
+                "CURRENCY_CODE"
+              ],
+              "as": "POCurrencyCode"
+            },
+            {
+              "ref": [
+                "LIFECYCLE_STATUS"
+              ],
+              "as": "POStatus"
+            },
+            {
+              "key": true,
+              "ref": [
+                "Items",
+                "PO_ITEM_POS"
+              ],
+              "as": "ItemPosition"
+            },
+            {
+              "ref": [
+                "Items",
+                "PRODUCT_GUID",
+                "PRODUCT_ID"
+              ],
+              "as": "ProductId"
+            },
+            {
+              "ref": [
+                "Items",
+                "PRODUCT_GUID",
+                "DESCRIPTION"
+              ],
+              "as": "ProductName"
+            },
+            {
+              "ref": [
+                "PARTNER_GUID",
+                "ADDRESS_GUID",
+                "CITY"
+              ],
+              "as": "City"
+            },
+            {
+              "ref": [
+                "PARTNER_GUID",
+                "ADDRESS_GUID",
+                "COUNTRY"
+              ],
+              "as": "Country"
+            },
+            {
+              "ref": [
+                "Items",
+                "GROSS_AMOUNT"
+              ],
+              "as": "GrossAmount"
+            },
+            {
+              "ref": [
+                "Items",
+                "NET_AMOUNT"
+              ],
+              "as": "NetAmount"
+            },
+            {
+              "ref": [
+                "Items",
+                "TAX_AMOUNT"
+              ],
+              "as": "TaxAmount"
+            },
+            {
+              "ref": [
+                "Items",
+                "CURRENCY_CODE"
+              ],
+              "as": "CurrencyCode"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "PurchaseOrderId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 9
+        },
+        "PartnerId": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "CompanyName": {
+          "type": "cds.String",
+          "length": 25
+        },
+        "POGrossAmount": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "POCurrencyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "POStatus": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "ItemPosition": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "ProductId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "ProductName": {
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "GrossAmount": {
+          "type": "cds.Decimal"
+        },
+        "NetAmount": {
+          "type": "cds.Decimal"
+        },
+        "TaxAmount": {
+          "type": "cds.Decimal"
+        },
+        "CurrencyCode": {
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "mithra.db.CDSViews.ProductValueHelp": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "mithra.db.product"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "PRODUCT_ID"
+              ],
+              "as": "ProductId"
+            },
+            {
+              "ref": [
+                "DESCRIPTION"
+              ],
+              "as": "Description"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "ProductId": {
+          "@EndUserText.label": [
+            {
+              "language": "EN",
+              "text": "Product ID"
+            },
+            {
+              "language": "DE",
+              "text": "Prodekt ID"
+            }
+          ],
+          "type": "cds.String",
+          "length": 8
+        },
+        "Description": {
+          "@EndUserText.label": [
+            {
+              "language": "EN",
+              "text": "Product Description"
+            },
+            {
+              "language": "DE",
+              "text": "Prodekt Description"
+            }
+          ],
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "mithra.db.CDSViews.ItemView": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "mithra.db.poitems"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "PARENT_KEY",
+                "PARTNER_GUID",
+                "NODE_KEY"
+              ],
+              "as": "Partner"
+            },
+            {
+              "ref": [
+                "PRODUCT_GUID",
+                "NODE_KEY"
+              ],
+              "as": "ProductId"
+            },
+            {
+              "ref": [
+                "CURRENCY_CODE"
+              ],
+              "as": "CurrencyCode"
+            },
+            {
+              "ref": [
+                "GROSS_AMOUNT"
+              ],
+              "as": "GrossAmount"
+            },
+            {
+              "ref": [
+                "NET_AMOUNT"
+              ],
+              "as": "NetAmount"
+            },
+            {
+              "ref": [
+                "TAX_AMOUNT"
+              ],
+              "as": "TaxAmount"
+            },
+            {
+              "ref": [
+                "PARENT_KEY",
+                "OVERALL_STATUS"
+              ],
+              "as": "POStatus"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "Partner": {
+          "@title": "{i18n>bp key}",
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "ProductId": {
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "CurrencyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "GrossAmount": {
+          "type": "cds.Decimal"
+        },
+        "NetAmount": {
+          "type": "cds.Decimal"
+        },
+        "TaxAmount": {
+          "type": "cds.Decimal"
+        },
+        "POStatus": {
+          "type": "cds.String",
+          "length": 1
+        }
+      }
+    },
+    "mithra.db.CDSViews.ProductViewSub": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "mithra.db.product"
+            ],
+            "as": "prod"
+          },
+          "columns": [
+            {
+              "key": true,
+              "ref": [
+                "PRODUCT_ID"
+              ],
+              "as": "ProductId"
+            },
+            {
+              "ref": [
+                "texts",
+                "DESCRIPTION"
+              ],
+              "as": "Description"
+            },
+            {
+              "SELECT": {
+                "from": {
+                  "ref": [
+                    "mithra.db.poitems"
+                  ],
+                  "as": "a"
+                },
+                "columns": [
+                  {
+                    "func": "SUM",
+                    "args": [
+                      {
+                        "ref": [
+                          "a",
+                          "GROSS_AMOUNT"
+                        ]
+                      }
+                    ],
+                    "as": "SUM"
+                  }
+                ],
+                "where": [
+                  {
+                    "ref": [
+                      "a",
+                      "PRODUCT_GUID",
+                      "NODE_KEY"
+                    ]
+                  },
+                  "=",
+                  {
+                    "ref": [
+                      "prod",
+                      "NODE_KEY"
+                    ]
+                  }
+                ]
+              },
+              "as": "PO_SUM",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 10,
+                "scale": 2
+              }
+            }
+          ]
+        }
+      },
+      "elements": {
+        "ProductId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8
+        },
+        "Description": {
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "PO_SUM": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 2,
+          "$calc": true
+        }
+      }
+    },
+    "mithra.db.CDSViews.ProductView": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "mithra.db.product"
+            ]
+          },
+          "mixin": {
+            "PO_ORDERS": {
+              "type": "cds.Association",
+              "cardinality": {
+                "max": "*"
+              },
+              "target": "mithra.db.CDSViews.ItemView",
+              "on": [
+                {
+                  "ref": [
+                    "PO_ORDERS",
+                    "ProductId"
+                  ]
+                },
+                "=",
+                {
+                  "ref": [
+                    "$projection",
+                    "ProductId"
+                  ]
+                }
+              ]
+            }
+          },
+          "columns": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ],
+              "as": "ProductId"
+            },
+            {
+              "ref": [
+                "DESCRIPTION"
+              ]
+            },
+            {
+              "ref": [
+                "CATEGORY"
+              ],
+              "as": "Category"
+            },
+            {
+              "ref": [
+                "PRICE"
+              ],
+              "as": "Price"
+            },
+            {
+              "ref": [
+                "TYPE_CODE"
+              ],
+              "as": "TypeCode"
+            },
+            {
+              "ref": [
+                "SUPPLIER_GUID",
+                "BP_ID"
+              ],
+              "as": "BPId"
+            },
+            {
+              "ref": [
+                "SUPPLIER_GUID",
+                "COMPANY_NAME"
+              ],
+              "as": "CompanyName"
+            },
+            {
+              "ref": [
+                "SUPPLIER_GUID",
+                "ADDRESS_GUID",
+                "CITY"
+              ],
+              "as": "City"
+            },
+            {
+              "ref": [
+                "SUPPLIER_GUID",
+                "ADDRESS_GUID",
+                "COUNTRY"
+              ],
+              "as": "Country"
+            },
+            {
+              "ref": [
+                "PO_ORDERS"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "ProductId": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "DESCRIPTION": {
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "Category": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "Price": {
+          "type": "cds.Decimal"
+        },
+        "TypeCode": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "BPId": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "CompanyName": {
+          "type": "cds.String",
+          "length": 25
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "PO_ORDERS": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "mithra.db.CDSViews.ItemView",
+          "on": [
+            {
+              "ref": [
+                "PO_ORDERS",
+                "ProductId"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self",
+                "ProductId"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "mithra.db.CDSViews.CProductValueView": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "mithra.db.CDSViews.ProductView"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "ProductId"
+              ]
+            },
+            {
+              "ref": [
+                "Country"
+              ]
+            },
+            {
+              "ref": [
+                "PO_ORDERS",
+                "CurrencyCode"
+              ],
+              "as": "CurrencyCode"
+            },
+            {
+              "func": "sum",
+              "args": [
+                {
+                  "ref": [
+                    "PO_ORDERS",
+                    "GrossAmount"
+                  ]
+                }
+              ],
+              "as": "POGrossAmount",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 10,
+                "scale": 2
+              }
+            }
+          ],
+          "groupBy": [
+            {
+              "ref": [
+                "ProductId"
+              ]
+            },
+            {
+              "ref": [
+                "Country"
+              ]
+            },
+            {
+              "ref": [
+                "PO_ORDERS",
+                "CurrencyCode"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "ProductId": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "CurrencyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "POGrossAmount": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 2,
+          "$calc": true
+        }
+      }
+    },
+    "mithra.common.Gender": {
+      "kind": "type",
+      "type": "cds.String",
+      "length": 1,
+      "enum": {
+        "male": {
+          "val": "M"
+        },
+        "female": {
+          "val": "F"
+        },
+        "nonBinary": {
+          "val": "N"
+        },
+        "noDisclosure": {
+          "val": "D"
+        },
+        "selfDescribe": {
+          "val": "S"
+        }
+      }
+    },
+    "mithra.common.AmountT": {
+      "kind": "type",
+      "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+      "@sap.unit": "CURRENCY_CODE",
+      "type": "cds.Decimal",
+      "precision": 15,
+      "scale": 2
+    },
+    "mithra.common.Amount": {
+      "kind": "aspect",
+      "elements": {
+        "CURRENCY_CODE": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "GROSS_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "NET_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "TAX_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "mithra.db.Guid": {
+      "kind": "type",
+      "type": "cds.String",
+      "length": 33
+    },
+    "mithra.db.businesspartner": {
+      "kind": "entity",
+      "elements": {
+        "NODE_KEY": {
+          "@title": "{i18n>bp key}",
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "BP_ROLE": {
+          "@title": "{i18n>bp role}",
+          "type": "cds.String",
+          "length": 2
+        },
+        "EMAIL_ADDRESS": {
+          "type": "cds.String",
+          "length": 105
+        },
+        "PHONE_NUMBER": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "FAX_NUMBER": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "WEB_ADDRESS": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "ADDRESS_GUID": {
+          "type": "cds.Association",
+          "target": "mithra.db.Address",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "BP_ID": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "COMPANY_NAME": {
+          "type": "cds.String",
+          "length": 25
+        }
+      }
+    },
+    "mithra.db.Address": {
+      "kind": "entity",
+      "elements": {
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "CITY": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "POSTAL_CODE": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "STREET": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "BUILDING": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "COUNTRY": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "ADDRESS_TYPE": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "VAL_START_DATE": {
+          "type": "cds.Date"
+        },
+        "VAL_END_DATE": {
+          "type": "cds.Date"
+        },
+        "LATITUDE": {
+          "type": "cds.Decimal"
+        },
+        "LONGITUDE": {
+          "type": "cds.Decimal"
+        },
+        "businesspartner": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "mithra.db.businesspartner",
+          "on": [
+            {
+              "ref": [
+                "businesspartner",
+                "ADDRESS_GUID"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "mithra.db.product": {
+      "kind": "entity",
+      "elements": {
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "PRODUCT_ID": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "TYPE_CODE": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CATEGORY": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "DESCRIPTION": {
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "NAME": {
+          "localized": true,
+          "type": "cds.String",
+          "length": 65
+        },
+        "SUPPLIER_GUID": {
+          "type": "cds.Association",
+          "target": "mithra.db.businesspartner",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "TAX_TARIF_CODE": {
+          "type": "cds.Integer"
+        },
+        "MEASURE_UNIT": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "WEIGHT_MEASURE": {
+          "type": "cds.Decimal"
+        },
+        "WEIGHT_UNIT": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CURRENCY_CODE": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "PRICE": {
+          "type": "cds.Decimal"
+        },
+        "WIDTH": {
+          "type": "cds.Decimal"
+        },
+        "DEPTH": {
+          "type": "cds.Decimal"
+        },
+        "HEIGHT": {
+          "type": "cds.Decimal"
+        },
+        "DIM_UNIT": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "mithra.db.product.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "NODE_KEY"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "mithra.db.product.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "NODE_KEY"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "mithra.db.purchaseorder": {
+      "kind": "entity",
+      "includes": [
+        "mithra.common.Amount"
+      ],
+      "elements": {
+        "CURRENCY_CODE": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "GROSS_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "NET_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "TAX_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "PO_ID": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "PARTNER_GUID": {
+          "type": "cds.Association",
+          "target": "mithra.db.businesspartner",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "LIFECYCLE_STATUS": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "OVERALL_STATUS": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "Items": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "mithra.db.poitems",
+          "on": [
+            {
+              "ref": [
+                "Items",
+                "PARENT_KEY"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "NOTE": {
+          "type": "cds.String",
+          "length": 256
+        }
+      }
+    },
+    "mithra.db.poitems": {
+      "kind": "entity",
+      "includes": [
+        "mithra.common.Amount"
+      ],
+      "elements": {
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "PARENT_KEY": {
+          "type": "cds.Association",
+          "target": "mithra.db.purchaseorder",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "PO_ITEM_POS": {
+          "type": "cds.Integer"
+        },
+        "PRODUCT_GUID": {
+          "type": "cds.Association",
+          "target": "mithra.db.product",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "CURRENCY_CODE": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "GROSS_AMOUNT": {
+          "type": "cds.Decimal"
+        },
+        "NET_AMOUNT": {
+          "type": "cds.Decimal"
+        },
+        "TAX_AMOUNT": {
+          "type": "cds.Decimal"
+        }
+      }
+    },
+    "mithra.db.Employee": {
+      "kind": "entity",
+      "includes": [
+        "cuid",
+        "managed"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "nameFirst": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "sex": {
+          "type": "mithra.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "type": "cds.Integer"
+        },
+        "email": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "loginName": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "currency_code": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "salaryAmount": {
+          "type": "cds.Integer"
+        },
+        "accountNumber": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "bankId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "bankName": {
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "CDSService": {
+      "@source": "srv/CDSService.cds",
+      "kind": "service",
+      "@path": "/CDSService"
+    },
+    "CDSService.POWorklist": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.CDSViews.POWorklist"
+          ]
+        }
+      },
+      "elements": {
+        "PurchaseOrderId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 9
+        },
+        "PartnerId": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "CompanyName": {
+          "type": "cds.String",
+          "length": 25
+        },
+        "POGrossAmount": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "POCurrencyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "POStatus": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "ItemPosition": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "ProductId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "ProductName": {
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "GrossAmount": {
+          "type": "cds.Decimal"
+        },
+        "NetAmount": {
+          "type": "cds.Decimal"
+        },
+        "TaxAmount": {
+          "type": "cds.Decimal"
+        },
+        "CurrencyCode": {
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "CDSService.ProductOrders": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.CDSViews.ProductViewSub"
+          ]
+        }
+      },
+      "elements": {
+        "ProductId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8
+        },
+        "Description": {
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "PO_SUM": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 2
+        }
+      }
+    },
+    "CDSService.ProductAggregation": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.CDSViews.CProductValueView"
+          ]
+        }
+      },
+      "elements": {
+        "ProductId": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "CurrencyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "POGrossAmount": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 2
+        }
+      }
+    },
+    "CatalogService": {
+      "@source": "srv/CatalogService.cds",
+      "kind": "service",
+      "@path": "/CatalogService",
+      "@requires": "authenticated-user"
+    },
+    "CatalogService.BPSet": {
+      "kind": "entity",
+      "@Capabilities.Insertable": true,
+      "@Capabilities.Updatable": true,
+      "@Capabilities.Deletable": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.businesspartner"
+          ]
+        }
+      },
+      "elements": {
+        "NODE_KEY": {
+          "@title": "{i18n>bp key}",
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "BP_ROLE": {
+          "@title": "{i18n>bp role}",
+          "type": "cds.String",
+          "length": 2
+        },
+        "EMAIL_ADDRESS": {
+          "type": "cds.String",
+          "length": 105
+        },
+        "PHONE_NUMBER": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "FAX_NUMBER": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "WEB_ADDRESS": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "ADDRESS_GUID": {
+          "type": "cds.Association",
+          "target": "CatalogService.AddressSet",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "BP_ID": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "COMPANY_NAME": {
+          "type": "cds.String",
+          "length": 25
+        }
+      }
+    },
+    "CatalogService.productSet": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.product"
+          ]
+        }
+      },
+      "elements": {
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "PRODUCT_ID": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "TYPE_CODE": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CATEGORY": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "DESCRIPTION": {
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "NAME": {
+          "localized": true,
+          "type": "cds.String",
+          "length": 65
+        },
+        "SUPPLIER_GUID": {
+          "type": "cds.Association",
+          "target": "CatalogService.BPSet",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "TAX_TARIF_CODE": {
+          "type": "cds.Integer"
+        },
+        "MEASURE_UNIT": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "WEIGHT_MEASURE": {
+          "type": "cds.Decimal"
+        },
+        "WEIGHT_UNIT": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CURRENCY_CODE": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "PRICE": {
+          "type": "cds.Decimal"
+        },
+        "WIDTH": {
+          "type": "cds.Decimal"
+        },
+        "DEPTH": {
+          "type": "cds.Decimal"
+        },
+        "HEIGHT": {
+          "type": "cds.Decimal"
+        },
+        "DIM_UNIT": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CatalogService.productSet.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "NODE_KEY"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "CatalogService.productSet.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "NODE_KEY"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CatalogService.AddressSet": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.Address"
+          ]
+        }
+      },
+      "elements": {
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "CITY": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "POSTAL_CODE": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "STREET": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "BUILDING": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "COUNTRY": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "ADDRESS_TYPE": {
+          "type": "cds.String",
+          "length": 44
+        },
+        "VAL_START_DATE": {
+          "type": "cds.Date"
+        },
+        "VAL_END_DATE": {
+          "type": "cds.Date"
+        },
+        "LATITUDE": {
+          "type": "cds.Decimal"
+        },
+        "LONGITUDE": {
+          "type": "cds.Decimal"
+        },
+        "businesspartner": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "CatalogService.BPSet",
+          "on": [
+            {
+              "ref": [
+                "businesspartner",
+                "ADDRESS_GUID"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "CatalogService.EmployeeSet": {
+      "kind": "entity",
+      "@restrict": [
+        {
+          "grant": [
+            "READ"
+          ],
+          "to": "Viewer",
+          "where": "bankName = $user.BankName",
+          "_where": "[{\"ref\":[\"bankName\"]},\"=\",{\"ref\":[\"$user\",\"BankName\"]}]"
+        },
+        {
+          "grant": [
+            "WRITE"
+          ],
+          "to": "Admin"
+        }
+      ],
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.Employee"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "nameFirst": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "sex": {
+          "type": "mithra.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "type": "cds.Integer"
+        },
+        "email": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "loginName": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "currency_code": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "salaryAmount": {
+          "type": "cds.Integer"
+        },
+        "accountNumber": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "bankId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "bankName": {
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "CatalogService.POs": {
+      "kind": "entity",
+      "@title": "{i18n>poHeader}",
+      "@odata.draft.enabled": true,
+      "@UI.SelectionFields": [
+        {
+          "=": "PO_ID"
+        },
+        {
+          "=": "GROSS_AMOUNT"
+        },
+        {
+          "=": "LIFECYCLE_STATUS"
+        },
+        {
+          "=": "CURRENCY_CODE"
+        },
+        {
+          "=": "TAX_AMOUNT"
+        },
+        {
+          "=": "LIFECYCLE_STATUS"
+        }
+      ],
+      "@UI.LineItem": [
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PO_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "GROSS_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataFieldForAction",
+          "Label": "Boost",
+          "Action": "CatalogService.boost",
+          "Inline": true
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "CURRENCY_CODE"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PARTNER_GUID.COMPANY_NAME"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PARTNER_GUID.ADDRESS_GUID.COUNTRY"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "TAX_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "LIFECYCLE_STATUS"
+          },
+          "Criticality": {
+            "=": "Criticality"
+          },
+          "CriticalityRepresentation": {
+            "#": "WithIcon"
+          }
+        }
+      ],
+      "@UI.HeaderInfo.$Type": "UI.HeaderInfoType",
+      "@UI.HeaderInfo.TypeName": "{i18n>PurchaseOrder}",
+      "@UI.HeaderInfo.TypeNamePlural": "{i18n>PurchaseOrders}",
+      "@UI.HeaderInfo.Title.Label": "{i18n>POID}",
+      "@UI.HeaderInfo.Title.Value": {
+        "=": "PO_ID"
+      },
+      "@UI.HeaderInfo.Description.Label": "{i18n>DESC}",
+      "@UI.HeaderInfo.Description.Value": {
+        "=": "PARTNER_GUID.COMPANY_NAME"
+      },
+      "@UI.HeaderInfo.ImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW2zm4dlp9ZAbZrDz6su1LenUegc3KGLkg2hWaIy_QllwFdlnRibX5gTAr&s=10",
+      "@UI.Facets": [
+        {
+          "$Type": "UI.ReferenceFacet",
+          "Label": "{i18n>purchaseorderGeneralInformation}",
+          "Target": {
+            "=": "@UI.FieldGroup#HeaderGeneralInformation"
+          }
+        },
+        {
+          "$Type": "UI.ReferenceFacet",
+          "Label": "{i18n>POItemsDetails}",
+          "Target": "Items/@UI.LineItem"
+        }
+      ],
+      "@UI.FieldGroup#HeaderGeneralInformation.$Type": "UI.FieldGroupType",
+      "@UI.FieldGroup#HeaderGeneralInformation.Data": [
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PO_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PARTNER_GUID.EMAIL_ADDRESS"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PARTNER_GUID.COMPANY_NAME"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PARTNER_GUID.BP_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "GROSS_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "TAX_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "NET_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "LIFECYCLE_STATUS"
+          }
+        }
+      ],
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.purchaseorder"
+          ]
+        },
+        "columns": [
+          "*",
+          {
+            "func": "round",
+            "args": [
+              {
+                "ref": [
+                  "GROSS_AMOUNT"
+                ]
+              },
+              {
+                "val": 2
+              }
+            ],
+            "as": "GROSS_AMOUNT",
+            "cast": {
+              "type": "cds.Decimal",
+              "precision": 15,
+              "scale": 2
+            }
+          },
+          {
+            "xpr": [
+              "case",
+              {
+                "ref": [
+                  "LIFECYCLE_STATUS"
+                ]
+              },
+              "when",
+              {
+                "val": "N"
+              },
+              "then",
+              {
+                "val": "New"
+              },
+              "when",
+              {
+                "val": "D"
+              },
+              "then",
+              {
+                "val": "Deliverd"
+              },
+              "when",
+              {
+                "val": "B"
+              },
+              "then",
+              {
+                "val": "Blocked"
+              },
+              "end"
+            ],
+            "as": "LIFECYCLE_STATUS",
+            "cast": {
+              "type": "cds.String",
+              "length": 20
+            }
+          },
+          {
+            "xpr": [
+              "case",
+              {
+                "ref": [
+                  "LIFECYCLE_STATUS"
+                ]
+              },
+              "when",
+              {
+                "val": "N"
+              },
+              "then",
+              {
+                "val": 2
+              },
+              "when",
+              {
+                "val": "B"
+              },
+              "then",
+              {
+                "val": 1
+              },
+              "when",
+              {
+                "val": "D"
+              },
+              "then",
+              {
+                "val": 3
+              },
+              "end"
+            ],
+            "as": "Criticality",
+            "cast": {
+              "type": "cds.Integer"
+            }
+          },
+          {
+            "ref": [
+              "Items"
+            ],
+            "cast": {
+              "target": "CatalogService.POItems"
+            }
+          }
+        ]
+      },
+      "elements": {
+        "CURRENCY_CODE": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "GROSS_AMOUNT": {
+          "@title": "{i18n>GROSS_AMOUNT}",
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2,
+          "$calc": true
+        },
+        "NET_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "TAX_AMOUNT": {
+          "@Semantics.amount.currencyCode": "CURRENCY_CODE",
+          "@sap.unit": "CURRENCY_CODE",
+          "type": "mithra.common.AmountT",
+          "precision": 15,
+          "scale": 2
+        },
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "PO_ID": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "PARTNER_GUID": {
+          "type": "cds.Association",
+          "target": "CatalogService.BPSet",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "LIFECYCLE_STATUS": {
+          "@Core.Computed": true,
+          "type": "cds.String",
+          "length": 20,
+          "$calc": true
+        },
+        "OVERALL_STATUS": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "Items": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "CatalogService.POItems",
+          "on": [
+            {
+              "ref": [
+                "Items",
+                "PARENT_KEY"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "NOTE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "Criticality": {
+          "@Core.Computed": true,
+          "type": "cds.Integer",
+          "$calc": true
+        }
+      },
+      "actions": {
+        "largestOrder": {
+          "kind": "function",
+          "returns": {
+            "items": {
+              "type": "CatalogService.POs"
+            }
+          }
+        },
+        "boost": {
+          "kind": "action"
+        }
+      }
+    },
+    "CatalogService.POItems": {
+      "kind": "entity",
+      "@title": "{i18n>poItems}",
+      "@UI.LineItem": [
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PO_ITEM_POS"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PRODUCT_GUID_NODE_KEY"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "PRODUCT_GUID.PRODUCT_ID"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "GROSS_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "NET_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "TAX_AMOUNT"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "CURRENCY_CODE"
+          }
+        }
+      ],
+      "@UI.HeaderInfo.$Type": "UI.HeaderInfoType",
+      "@UI.HeaderInfo.TypeName": "PO Item",
+      "@UI.HeaderInfo.TypeNamePlural": "PO Items",
+      "@UI.HeaderInfo.Title.$Type": "UI.DataField",
+      "@UI.HeaderInfo.Title.Value": {
+        "=": "NODE_KEY"
+      },
+      "@UI.HeaderInfo.Description.$Type": "UI.DataField",
+      "@UI.HeaderInfo.Description.Value": {
+        "=": "PO_ITEM_POS"
+      },
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.poitems"
+          ]
+        },
+        "columns": [
+          "*",
+          {
+            "ref": [
+              "PARENT_KEY"
+            ],
+            "cast": {
+              "target": "CatalogService.POs"
+            }
+          },
+          {
+            "ref": [
+              "PRODUCT_GUID"
+            ],
+            "cast": {
+              "target": "CatalogService.productSet"
+            }
+          }
+        ]
+      },
+      "elements": {
+        "NODE_KEY": {
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "PARENT_KEY": {
+          "type": "cds.Association",
+          "target": "CatalogService.POs",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "PO_ITEM_POS": {
+          "type": "cds.Integer"
+        },
+        "PRODUCT_GUID": {
+          "type": "cds.Association",
+          "target": "CatalogService.productSet",
+          "keys": [
+            {
+              "ref": [
+                "NODE_KEY"
+              ]
+            }
+          ]
+        },
+        "CURRENCY_CODE": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "GROSS_AMOUNT": {
+          "type": "cds.Decimal"
+        },
+        "NET_AMOUNT": {
+          "type": "cds.Decimal"
+        },
+        "TAX_AMOUNT": {
+          "type": "cds.Decimal"
+        }
+      }
+    },
+    "mysrvdemo": {
+      "@source": "srv/mysimpleservice.cds",
+      "kind": "service"
+    },
+    "mysrvdemo.somesrv": {
+      "kind": "function",
+      "params": {
+        "msg": {
+          "type": "cds.String"
+        }
+      },
+      "returns": {
+        "type": "cds.String"
+      }
+    },
+    "mysrvdemo.ReadEmployeeSrv": {
+      "kind": "entity",
+      "@readonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.Employee"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "nameFirst": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "sex": {
+          "type": "mithra.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "type": "cds.Integer"
+        },
+        "email": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "loginName": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "currency_code": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "salaryAmount": {
+          "type": "cds.Integer"
+        },
+        "accountNumber": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "bankId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "bankName": {
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "mysrvdemo.InsertEmployeeSrv": {
+      "kind": "entity",
+      "@insertonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.Employee"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "nameFirst": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "sex": {
+          "type": "mithra.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "type": "cds.Integer"
+        },
+        "email": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "loginName": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "currency_code": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "salaryAmount": {
+          "type": "cds.Integer"
+        },
+        "accountNumber": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "bankId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "bankName": {
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "mysrvdemo.UpdateEmployeeSrv": {
+      "kind": "entity",
+      "@updateonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.Employee"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "nameFirst": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "sex": {
+          "type": "mithra.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "type": "cds.Integer"
+        },
+        "email": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "loginName": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "currency_code": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "salaryAmount": {
+          "type": "cds.Integer"
+        },
+        "accountNumber": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "bankId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "bankName": {
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "mysrvdemo.DeleteEmployeeSrv": {
+      "kind": "entity",
+      "@deleteonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.Employee"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "nameFirst": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "sex": {
+          "type": "mithra.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "type": "cds.Integer"
+        },
+        "email": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "loginName": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "currency_code": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "salaryAmount": {
+          "type": "cds.Integer"
+        },
+        "accountNumber": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "bankId": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "bankName": {
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "cds.outbox.Messages": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "timestamp": {
+          "type": "cds.Timestamp"
+        },
+        "target": {
+          "type": "cds.String"
+        },
+        "msg": {
+          "type": "cds.LargeString"
+        },
+        "attempts": {
+          "type": "cds.Integer",
+          "default": {
+            "val": 0
+          }
+        },
+        "partition": {
+          "type": "cds.Integer",
+          "default": {
+            "val": 0
+          }
+        },
+        "lastError": {
+          "type": "cds.LargeString"
+        },
+        "lastAttemptTimestamp": {
+          "type": "cds.Timestamp"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 23
+        },
+        "task": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "appid": {
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "Language": {
+      "kind": "type",
+      "@title": "{i18n>Language}",
+      "@description": "{i18n>LanguageCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Languages",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Currency": {
+      "kind": "type",
+      "@title": "{i18n>Currency}",
+      "@description": "{i18n>CurrencyCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Currencies",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "kind": "type",
+      "@title": "{i18n>Country}",
+      "@description": "{i18n>CountryCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Countries",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Timezone": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "sap.common.Timezones",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "sap.common": {
+      "kind": "context"
+    },
+    "sap.common.Locale": {
+      "kind": "type",
+      "@title": "{i18n>LanguageCode}",
+      "type": "cds.String",
+      "length": 14
+    },
+    "sap.common.Languages": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Languages.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Languages.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Countries": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>CountryCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Currencies": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>CurrencyCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "symbol": {
+          "@title": "{i18n>CurrencySymbol}",
+          "type": "cds.String",
+          "length": 5
+        },
+        "minorUnit": {
+          "@title": "{i18n>CurrencyMinorUnit}",
+          "type": "cds.Int16"
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Currencies.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Currencies.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Timezones": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>TimeZoneCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Timezones.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Timezones.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.CodeList": {
+      "kind": "aspect",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        }
+      }
+    },
+    "sap.common.TextsAspect": {
+      "kind": "aspect",
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        }
+      }
+    },
+    "sap.common.FlowHistory": {
+      "kind": "aspect",
+      "@cds.persistence.skip": "if-unused",
+      "elements": {
+        "transitions_": {
+          "@odata.draft.enabled": false,
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "targetAspect": {
+            "elements": {
+              "timestamp": {
+                "@cds.on.insert": {
+                  "=": "$now"
+                },
+                "@UI.HiddenFilter": true,
+                "@UI.ExcludeFromNavigationContext": true,
+                "@Core.Immutable": true,
+                "@title": "{i18n>CreatedAt}",
+                "@readonly": true,
+                "key": true,
+                "type": {
+                  "ref": [
+                    "managed",
+                    "createdAt"
+                  ]
+                }
+              },
+              "user": {
+                "@cds.on.insert": {
+                  "=": "$user"
+                },
+                "@UI.HiddenFilter": true,
+                "@UI.ExcludeFromNavigationContext": true,
+                "@Core.Immutable": true,
+                "@title": "{i18n>CreatedBy}",
+                "@readonly": true,
+                "@description": "{i18n>UserID.Description}",
+                "type": {
+                  "ref": [
+                    "managed",
+                    "createdBy"
+                  ]
+                },
+                "length": 255
+              },
+              "status": {
+                "type": "cds.String"
+              },
+              "comment": {
+                "type": "cds.String"
+              }
+            }
+          }
+        }
+      }
+    },
+    "cuid": {
+      "kind": "aspect",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "managed": {
+      "kind": "aspect",
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        }
+      }
+    },
+    "temporal": {
+      "kind": "aspect",
+      "elements": {
+        "validFrom": {
+          "@cds.valid.from": true,
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "type": "cds.Timestamp"
+        }
+      }
+    },
+    "User": {
+      "kind": "type",
+      "@title": "{i18n>UserID}",
+      "@description": "{i18n>UserID.Description}",
+      "type": "cds.String",
+      "length": 255
+    },
+    "mithra.db.product.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "NODE_KEY": {
+          "@odata.containment.ignore": true,
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "DESCRIPTION": {
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "NAME": {
+          "localized": null,
+          "type": "cds.String",
+          "length": 65
+        }
+      }
+    },
+    "CatalogService.productSet.texts": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "@odata.draft.enabled": false,
+      "projection": {
+        "from": {
+          "ref": [
+            "mithra.db.product.texts"
+          ]
+        }
+      },
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "NODE_KEY": {
+          "@odata.containment.ignore": true,
+          "key": true,
+          "type": "mithra.db.Guid",
+          "length": 33
+        },
+        "DESCRIPTION": {
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "NAME": {
+          "localized": null,
+          "type": "cds.String",
+          "length": 65
+        }
+      }
+    },
+    "sap.common.Languages.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        }
+      }
+    },
+    "sap.common.Countries.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CountryCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.common.Currencies.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CurrencyCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.common.Timezones.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>TimeZoneCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v6.9.3",
+    "compilerVersion": "6.9.3",
+    "compilerCsnFlavor": "inferred",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

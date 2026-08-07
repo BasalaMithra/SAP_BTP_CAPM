@@ -1,6 +1,0 @@
-VIEW mithraservice_product_texts AS SELECT
-  texts_0.locale,
-  texts_0.NODE_KEY,
-  texts_0.DESCRIPTION,
-  texts_0.NAME
-FROM mithra_db_product_texts AS texts_0

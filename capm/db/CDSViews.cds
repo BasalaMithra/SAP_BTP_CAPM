@@ -56,7 +56,7 @@ context CDSViews {
     };
     define view ProductViewSub as
     select from db.product as prod{
-        PRODUCT_ID as![ProductId],
+        key PRODUCT_ID as ProductId,
         texts.DESCRIPTION as![Description],
         (
             select from db.poitems as a{

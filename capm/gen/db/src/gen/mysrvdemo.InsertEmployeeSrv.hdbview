@@ -1,6 +1,9 @@
 VIEW mysrvdemo_InsertEmployeeSrv AS SELECT
   Employee_0.ID,
-  Employee_0.NODE_KEY,
+  Employee_0.createdAt,
+  Employee_0.createdBy,
+  Employee_0.modifiedAt,
+  Employee_0.modifiedBy,
   Employee_0.nameFirst,
   Employee_0.nameMiddle,
   Employee_0.nameLast,

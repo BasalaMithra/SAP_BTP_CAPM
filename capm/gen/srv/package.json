@@ -1,0 +1,75 @@
+{
+  "name": "capm",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "@sap/xsenv": "^6.2.1",
+    "@sap/xssec": "^4.13.3",
+    "hana": "^0.0.2",
+    "hdb": "^2.29.5",
+    "passport": "^0.7.0",
+    "sqlite": "^3.0.6"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.4",
+    "@sap-ux/eslint-plugin-fiori-tools": "^10.7.14",
+    "@sap/cds-dk": "^9",
+    "@sap/ux-ui5-tooling": "^1.29.0",
+    "@ui5/cli": "^4.0.60",
+    "eslint": "^10.8.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-purchaseorder": "cds watch --open mithra.app.purchaseorder/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "sapux": [
+    "app/purchaseorder"
+  ],
+  "cds": {
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "requires": {
+      "uaa": {
+        "kind": "xsuaa"
+      },
+      "auth": {
+        "[production]": {
+          "strategy": "JWT"
+        },
+        "[development]": {
+          "strategy": "mock",
+          "users": {
+            "mithra": {
+              "roles": [
+                "Admin",
+                "Viewer"
+              ],
+              "userAttributes": {
+                "BankName": [
+                  "$UNRESTRICTED"
+                ]
+              }
+            },
+            "anitha": {
+              "roles": [
+                "Viewer"
+              ],
+              "userAttributes": {
+                "BankName": [
+                  "Axis Bank"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
