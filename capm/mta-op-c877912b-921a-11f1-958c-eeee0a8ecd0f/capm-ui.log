@@ -1,0 +1,352 @@
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:38:59.302321] Starting app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:38:59.433779] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b creating container for instance bc388e35-d551-425e-6335-71cf (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:38:59.754598] Security group rules were updated (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:38:59.804049] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b successfully created container for instance bc388e35-d551-425e-6335-71cf (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:00.136053] Downloading droplet... (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:05.320143] Downloaded droplet (62.4M) (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:05.320291] Starting health monitoring of container (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:05.372268] Invoking pre-start scripts. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:05.512184] Invoking start command. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:05.799240] > purchaseorder@0.0.1 start (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:05.799264] > node node_modules/@sap/approuter/approuter.js (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:05.929] {"written_at":"2026-08-06T17:39:05.927Z","written_ts":1786037945927000000,"csn_component":"-","correlation_id":"-","type":"log","logger":"nodejs-logger","layer":"/LoggingLibrary","level":"warning","container_id":"10.37.129.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"","msg":"Dynamic log level switching not available"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:06.279800] {"written_at":"2026-08-06T17:39:06.279Z","written_ts":1786037946279000000,"csn_component":"-","correlation_id":"mshsvnaf","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.129.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"mshsvnaf","msg":"Application router version 22.0.3"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:06.283558] {"written_at":"2026-08-06T17:39:06.283Z","written_ts":1786037946283000000,"csn_component":"-","correlation_id":"mshsvnaj","type":"log","logger":"nodejs-logger","layer":"/Configuration","level":"info","container_id":"10.37.129.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"mshsvnaj","msg":"No COOKIES environment variable"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:06.287863] {"written_at":"2026-08-06T17:39:06.287Z","written_ts":1786037946287000000,"csn_component":"-","correlation_id":"mshsvnan","type":"log","logger":"nodejs-logger","layer":"/Configuration","level":"info","container_id":"10.37.129.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"mshsvnan","msg":"Replacing $XSAPPNAME will not take place - 'xsappname' property not found in UAA configuration."} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:06.305912] {"written_at":"2026-08-06T17:39:06.305Z","written_ts":1786037946305000000,"csn_component":"-","correlation_id":"mshsvnaf","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.129.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"mshsvnaf","msg":"Application router is listening on port: 8080"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:08.832959] Container became healthy (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T17:39:08.855761] Process became ready with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c payload: {"instance"=>"bc388e35-d551-425e-6335-71cf", "index"=>0, "cell_id"=>"f95ef7fb-a2f2-480d-af80-cd44d0d9846b", "ready"=>true, "version"=>"d303bd90-fab8-4fa2-a024-259bb03a6321"} (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T18:06:37.550591] 55c12a3dtrial-dev-capm-ui.cfapps.us10-003.hana.ondemand.com - [2026-08-06T18:06:37.535578485Z] "GET / HTTP/2.0" 302 0 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36" "10.0.72.1:33072" "10.37.129.4:61003" x_forwarded_for:"223.186.107.196, 10.0.72.1" x_forwarded_proto:"https" vcap_request_id:"609ee194-50e8-4498-6c1d-b844b1a41e34" response_time:0.014802 gorouter_time:0.000064 app_id:"769d6366-0fbc-4d73-bc5c-74df9ad3912c" app_index:"0" instance_id:"bc388e35-d551-425e-6335-71cf" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.000551 tls_time:0.007495 backend_time:0.014738 local_address:"10.0.65.9:7596" x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"59e1cb38-5dd5-4c76-b43f-7b797d717e5c-6A74CD24-2EED3" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_cf_true_client_ip:"223.186.107.196" x_request_id:"-" x_b3_traceid:"609ee19450e844986c1db844b1a41e34" x_b3_spanid:"6c1db844b1a41e34" x_b3_parentspanid:"-" b3:"609ee19450e844986c1db844b1a41e34-6c1db844b1a41e34" (STDOUT, RTR)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T18:06:37.841957] {"written_at":"2026-08-06T18:06:37.841Z","written_ts":1786039597841000000,"csn_component":"-","correlation_id":"c8501ad8-56fb-45bb-59c8-9f939944d719","type":"log","logger":"nodejs-logger","layer":"/Handler","level":"error","container_id":"10.37.129.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","request_id":"c8501ad8-56fb-45bb-59c8-9f939944d719","msg":"GET request to /purchaseorder/webapp/ completed with status 500 OAuth2 requires \"clientid\" option"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-06T18:06:37.843378] 55c12a3dtrial-dev-capm-ui.cfapps.us10-003.hana.ondemand.com - [2026-08-06T18:06:37.835957512Z] "GET /purchaseorder/webapp/ HTTP/2.0" 500 0 21 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36" "10.0.72.1:33072" "10.37.129.4:61003" x_forwarded_for:"223.186.107.196, 10.0.72.1" x_forwarded_proto:"https" vcap_request_id:"c8501ad8-56fb-45bb-59c8-9f939944d719" response_time:0.007244 gorouter_time:0.000075 app_id:"769d6366-0fbc-4d73-bc5c-74df9ad3912c" app_index:"0" instance_id:"bc388e35-d551-425e-6335-71cf" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.000000 tls_time:0.000000 backend_time:0.007169 local_address:"10.0.65.9:7596" x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"59e1cb38-5dd5-4c76-b43f-7b797d717e5c-6A74CD2D-2EED5" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_cf_true_client_ip:"223.186.107.196" x_request_id:"-" x_b3_traceid:"c8501ad856fb45bb59c89f939944d719" x_b3_spanid:"59c89f939944d719" x_b3_parentspanid:"-" b3:"c8501ad856fb45bb59c89f939944d719-59c89f939944d719" (STDOUT, RTR)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T00:02:31.845557] Stopping app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T00:02:31.874047] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b stopping instance bc388e35-d551-425e-6335-71cf (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T00:03:38.608890] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b destroying container for instance bc388e35-d551-425e-6335-71cf (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T00:03:38.695781] Exit status 137 (STDOUT, PROXY)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T00:03:40.128122] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b successfully destroyed container for instance bc388e35-d551-425e-6335-71cf (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:36.727505] Starting app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:36.828041] Cell c343a1ce-501c-453d-aabd-5a2aaaa23496 creating container for instance 76357d15-794f-42ce-716d-ffd9 (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:37.131481] Security group rules were updated (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:37.190795] Cell c343a1ce-501c-453d-aabd-5a2aaaa23496 successfully created container for instance 76357d15-794f-42ce-716d-ffd9 (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:37.522090] Downloading droplet... (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:42.386713] Downloaded droplet (62.4M) (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:42.386882] Starting health monitoring of container (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:42.435407] Invoking pre-start scripts. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:42.575057] Invoking start command. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:42.864186] > purchaseorder@0.0.1 start (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:42.864207] > node node_modules/@sap/approuter/approuter.js (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:42.993052] {"written_at":"2026-08-07T04:33:42.991Z","written_ts":1786077222991000000,"csn_component":"-","correlation_id":"-","type":"log","logger":"nodejs-logger","layer":"/LoggingLibrary","level":"warning","container_id":"10.37.192.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"","msg":"Dynamic log level switching not available"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:43.333659] {"written_at":"2026-08-07T04:33:43.333Z","written_ts":1786077223333000000,"csn_component":"-","correlation_id":"msig9hnp","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.192.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msig9hnp","msg":"Application router version 22.0.3"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:43.337553] {"written_at":"2026-08-07T04:33:43.337Z","written_ts":1786077223337000000,"csn_component":"-","correlation_id":"msig9hnt","type":"log","logger":"nodejs-logger","layer":"/Configuration","level":"info","container_id":"10.37.192.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msig9hnt","msg":"No COOKIES environment variable"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:43.341860] {"written_at":"2026-08-07T04:33:43.341Z","written_ts":1786077223341000000,"csn_component":"-","correlation_id":"msig9hnx","type":"log","logger":"nodejs-logger","layer":"/Configuration","level":"info","container_id":"10.37.192.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msig9hnx","msg":"Replacing $XSAPPNAME will not take place - 'xsappname' property not found in UAA configuration."} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:43.360501] {"written_at":"2026-08-07T04:33:43.360Z","written_ts":1786077223360000000,"csn_component":"-","correlation_id":"msig9hnp","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.192.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msig9hnp","msg":"Application router is listening on port: 8080"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:45.871637] Container became healthy (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:33:45.893035] Process became ready with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c payload: {"instance"=>"76357d15-794f-42ce-716d-ffd9", "index"=>0, "cell_id"=>"c343a1ce-501c-453d-aabd-5a2aaaa23496", "ready"=>true, "version"=>"dbd043fe-b707-40dc-a77f-5e6d1c80959e"} (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:34:30.582016] 55c12a3dtrial-dev-capm-ui.cfapps.us10-003.hana.ondemand.com - [2026-08-07T04:34:30.566548499Z] "GET / HTTP/2.0" 302 0 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36" "10.0.200.3:60358" "10.37.192.4:61009" x_forwarded_for:"106.206.27.90, 10.0.200.3" x_forwarded_proto:"https" vcap_request_id:"00f1a2ea-e327-4a04-4cf0-74bcf9e56453" response_time:0.015268 gorouter_time:0.000068 app_id:"769d6366-0fbc-4d73-bc5c-74df9ad3912c" app_index:"0" instance_id:"76357d15-794f-42ce-716d-ffd9" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.000539 tls_time:0.007857 backend_time:0.015200 local_address:"10.0.193.9:50798" x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"5d3431a1-27a5-4d70-9548-d8214e697f93-6A75604C-60ED2" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_cf_true_client_ip:"106.206.27.90" x_request_id:"-" x_b3_traceid:"00f1a2eae3274a044cf074bcf9e56453" x_b3_spanid:"4cf074bcf9e56453" x_b3_parentspanid:"-" b3:"00f1a2eae3274a044cf074bcf9e56453-4cf074bcf9e56453" (STDOUT, RTR)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:34:30.886809] {"written_at":"2026-08-07T04:34:30.886Z","written_ts":1786077270886000000,"csn_component":"-","correlation_id":"1fb32b54-c3eb-4d65-7c68-ade572d77ad3","type":"log","logger":"nodejs-logger","layer":"/Handler","level":"error","container_id":"10.37.192.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","request_id":"1fb32b54-c3eb-4d65-7c68-ade572d77ad3","msg":"GET request to /purchaseorder/webapp/ completed with status 500 OAuth2 requires \"clientid\" option"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:34:30.888002] 55c12a3dtrial-dev-capm-ui.cfapps.us10-003.hana.ondemand.com - [2026-08-07T04:34:30.871483397Z] "GET /purchaseorder/webapp/ HTTP/2.0" 500 0 21 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36" "10.0.200.3:31514" "10.37.192.4:61009" x_forwarded_for:"106.206.27.90, 10.0.200.3" x_forwarded_proto:"https" vcap_request_id:"1fb32b54-c3eb-4d65-7c68-ade572d77ad3" response_time:0.016417 gorouter_time:0.000111 app_id:"769d6366-0fbc-4d73-bc5c-74df9ad3912c" app_index:"0" instance_id:"76357d15-794f-42ce-716d-ffd9" failed_attempts:0 failed_attempts_time:"-" dns_time:0.000000 dial_time:0.000462 tls_time:0.007745 backend_time:0.016306 local_address:"10.0.193.8:31328" x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"5d3431a1-27a5-4d70-9548-d8214e697f93-6A756056-60ED3" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" x_cf_forwarded_url:"-" traceparent:"-" true_client_ip:"-" x_cf_true_client_ip:"106.206.27.90" x_request_id:"-" x_b3_traceid:"1fb32b54c3eb4d657c68ade572d77ad3" x_b3_spanid:"7c68ade572d77ad3" x_b3_parentspanid:"-" b3:"1fb32b54c3eb4d657c68ade572d77ad3-7c68ade572d77ad3" (STDOUT, RTR)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:26.741047] Updated app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c ({"metadata"=>{"annotations"=>{"mta_id"=>"capm", "mta_version"=>"1.3.2", "mta_module"=>"{\"name\":\"capm-ui\"}", "mta_module_provided_dependencies"=>"[]", "mta_bound_services"=>"[\"capm-xsuaa\"]"}, "labels"=>{"mta_id"=>"fd676a2022f9415c2d671379739b9cf7"}}}) (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:26.928619] Updated app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c ({"lifecycle"=>{"data"=>{"buildpacks"=>[]}, "type"=>"buildpack"}}) (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:27.025664] Updating process: "web" (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:46.112287] Uploading app package for app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:46.275277] Updated app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:56.128729] Stopping app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:56.169029] Cell c343a1ce-501c-453d-aabd-5a2aaaa23496 stopping instance 76357d15-794f-42ce-716d-ffd9 (STDOUT, CELL)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:56.298131] Creating build for app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.376814] Downloading sap_java_buildpack_jakarta_2_67... (STDOUT, STG)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.376887] Downloading php_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.376915] Downloading sap_java_buildpack_jakarta_2_65... (STDOUT, STG)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.376953] Downloading nginx_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.376988] Downloading sap_java_buildpack_jakarta... (STDOUT, STG)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.414105] Downloaded sap_java_buildpack_jakarta (STDOUT, STG)#
+#2026 08 07 04:45:56.201#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.414137] Downloading java_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.414738] Downloaded sap_java_buildpack_jakarta_2_67 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.414829] Downloaded php_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.414850] Downloading staticfile_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.417990] Downloaded nginx_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.418016] Downloading binary_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.423802] Downloaded sap_java_buildpack_jakarta_2_65 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.423825] Downloading sap_java_buildpack_jakarta_2_66... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.425911] Downloading go_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.448621] Downloaded staticfile_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.448639] Downloading nodejs_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.449738] Downloaded java_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.449795] Downloading java_buildpack_v5_preview... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.458329] Downloaded binary_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.458344] Downloading python_buildpack... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.459974] Downloaded go_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.462902] Downloaded sap_java_buildpack_jakarta_2_66 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.482565] Downloaded nodejs_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.483600] Downloaded python_buildpack (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.488825] Downloaded java_buildpack_v5_preview (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.488910] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b creating container for instance d992d2a4-ffac-43ca-9f7b-383d41dba2cd (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.790343] Security group rules were updated (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:57.844945] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b successfully created container for instance d992d2a4-ffac-43ca-9f7b-383d41dba2cd (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:58.115226] Downloading app package... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:58.115291] Downloading build artifacts cache... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:58.229293] Downloaded build artifacts cache (222B) (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:58.899958] Downloaded app package (7.2M) (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:59.374697] -----> Nodejs Buildpack version 1.9.2 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:59.650900] -----> Bootstrapping python (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:59.650922] -----> Installing python 3.13.13 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:38:59.651065] Copy [/tmp/buildpacks/411ec6166282b4d1/dependencies/268a5e3743d51a14b86ea9da64439307/python_3.13.13_linux_x64_cflinuxfs4_8311abbf.tgz] (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:02.548152] -----> Installing binaries (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:02.548359] engines.node (package.json): unspecified (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:02.548372] engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:02.548376] [31;1m**WARNING**[0m Node version not specified in package.json or .nvmrc. See: http://docs.cloudfoundry.org/buildpacks/node/node-tips.html (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:02.548427] -----> Installing node 22.22.2 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:02.548660] Copy [/tmp/buildpacks/411ec6166282b4d1/dependencies/5deea320c19fa94e977cff523ac00f82/node_22.22.2_linux_x64_cflinuxfs4_e5459374.tgz] (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.281266] Using default npm version: 10.9.7 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.281299] -----> Installing yarn 1.22.22 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.281428] Copy [/tmp/buildpacks/411ec6166282b4d1/dependencies/e4fe26756e9984a665478d350474fa2e/yarn_1.22.22_linux_noarch_any-stack_b6132b86.tgz] (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.519248] Installed yarn 1.22.22 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.519275] -----> Creating runtime environment (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.520962] NODE_ENV=production (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.520988] NODE_HOME=/tmp/contents314922196/deps/0/node (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.520994] NODE_MODULES_CACHE=true (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.520996] NODE_VERBOSE=false (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.520999] NPM_CONFIG_LOGLEVEL=error (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.521004] NPM_CONFIG_PRODUCTION=true (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.521017] -----> Building dependencies (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.521019] Prebuild detected (node_modules already exists) (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:04.521021] Rebuilding any native modules (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.062166] rebuilt dependencies successfully (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.062938] npm notice (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.062950] npm notice New major version of npm available! 10.9.7 -> 12.0.2 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.062956] npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.062958] npm notice To update run: npm install -g npm@12.0.2 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.062959] npm notice (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.111731] Installing any new modules (package.json + package-lock.json) (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.950632] up to date in 782ms (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.950665] 32 packages are looking for funding (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:05.950674] run `npm fund` for details (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:06.618462] Contrast Security no credentials found. Will not write environment files. (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:15.104855] Exit status 0 (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:15.104905] Uploading droplet, build artifacts cache... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:15.104939] Uploading droplet... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:15.105014] Uploading build artifacts cache... (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:15.123347] Uploaded build artifacts cache (222B) (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:15.749770] Creating droplet for app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:21.821807] Uploaded droplet (62.4M) (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:21.836854] Uploading complete (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:22.232952] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b stopping instance d992d2a4-ffac-43ca-9f7b-383d41dba2cd (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:22.232999] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b destroying container for instance d992d2a4-ffac-43ca-9f7b-383d41dba2cd (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:22.279104] Staging complete for build d992d2a4-ffac-43ca-9f7b-383d41dba2cd (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:26.004710] Updated app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c ({:droplet_guid=>"1c7d5088-db08-4a64-b338-85711fe1a1ea"}) (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:26.154923] Creating revision for app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:26.194580] Starting app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:26.318915] Cell 2f709810-9b95-445d-9c2a-0d5af0af5ace creating container for instance 1ca119f8-a4c0-4c6d-44a7-2a1e (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:26.639697] Security group rules were updated (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:26.699223] Cell 2f709810-9b95-445d-9c2a-0d5af0af5ace successfully created container for instance 1ca119f8-a4c0-4c6d-44a7-2a1e (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:26.797271] Cell f95ef7fb-a2f2-480d-af80-cd44d0d9846b successfully destroyed container for instance d992d2a4-ffac-43ca-9f7b-383d41dba2cd (STDOUT, STG)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:27.009089] Downloading droplet... (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:30.104960] Downloaded droplet (62.4M) (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:30.105243] Starting health monitoring of container (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:30.155936] Invoking pre-start scripts. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:30.295183] Invoking start command. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:30.587948] > purchaseorder@0.0.1 start (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:30.587972] > node node_modules/@sap/approuter/approuter.js (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:30.720865] {"written_at":"2026-08-07T04:39:30.719Z","written_ts":1786077570719000000,"csn_component":"-","correlation_id":"-","type":"log","logger":"nodejs-logger","layer":"/LoggingLibrary","level":"warning","container_id":"10.37.128.5","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"","msg":"Dynamic log level switching not available"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:31.077822] {"written_at":"2026-08-07T04:39:31.077Z","written_ts":1786077571077000000,"csn_component":"-","correlation_id":"msiggxz9","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.128.5","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msiggxz9","msg":"Application router version 22.0.3"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:31.081523] {"written_at":"2026-08-07T04:39:31.081Z","written_ts":1786077571081000000,"csn_component":"-","correlation_id":"msiggxzd","type":"log","logger":"nodejs-logger","layer":"/Configuration","level":"info","container_id":"10.37.128.5","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msiggxzd","msg":"No COOKIES environment variable"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:31.104238] {"written_at":"2026-08-07T04:39:31.103Z","written_ts":1786077571103000000,"csn_component":"-","correlation_id":"msiggxz9","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.128.5","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msiggxz9","msg":"Application router is listening on port: 8080"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:33.755735] Container became healthy (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:39:33.784464] Process became ready with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c payload: {"instance"=>"1ca119f8-a4c0-4c6d-44a7-2a1e", "index"=>0, "cell_id"=>"2f709810-9b95-445d-9c2a-0d5af0af5ace", "ready"=>true, "version"=>"60005d82-f1f7-4692-a76d-8877d65fb4dd"} (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:40:02.827363] Cell c343a1ce-501c-453d-aabd-5a2aaaa23496 destroying container for instance 76357d15-794f-42ce-716d-ffd9 (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:40:02.903248] Exit status 137 (STDOUT, PROXY)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:40:04.114391] Cell c343a1ce-501c-453d-aabd-5a2aaaa23496 successfully destroyed container for instance 76357d15-794f-42ce-716d-ffd9 (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:28.047018] Updated app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c ({"lifecycle"=>{"data"=>{"buildpacks"=>[]}, "type"=>"buildpack"}}) (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:28.140663] Updating process: "web" (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:47.020537] Stopping app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:47.057731] Cell 2f709810-9b95-445d-9c2a-0d5af0af5ace stopping instance 1ca119f8-a4c0-4c6d-44a7-2a1e (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:47.273317] Starting app with guid 769d6366-0fbc-4d73-bc5c-74df9ad3912c (STDOUT, API)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:47.394995] Cell 0c73d50e-409f-4732-a242-2d244c3cbc38 creating container for instance 4ba61853-b9fa-4311-7c13-7e19 (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:47.693478] Security group rules were updated (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:47.748124] Cell 0c73d50e-409f-4732-a242-2d244c3cbc38 successfully created container for instance 4ba61853-b9fa-4311-7c13-7e19 (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:48.133467] Downloading droplet... (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:52.391784] Downloaded droplet (62.4M) (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:52.391915] Starting health monitoring of container (STDOUT, CELL)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:52.441587] Invoking pre-start scripts. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:52.579977] Invoking start command. (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:52.874389] > purchaseorder@0.0.1 start (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:52.874414] > node node_modules/@sap/approuter/approuter.js (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:53.008439] {"written_at":"2026-08-07T04:45:53.007Z","written_ts":1786077953007000000,"csn_component":"-","correlation_id":"-","type":"log","logger":"nodejs-logger","layer":"/LoggingLibrary","level":"warning","container_id":"10.37.65.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"","msg":"Dynamic log level switching not available"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:53.362567] {"written_at":"2026-08-07T04:45:53.362Z","written_ts":1786077953362000000,"csn_component":"-","correlation_id":"msigp4ya","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.65.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msigp4ya","msg":"Application router version 22.0.3"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:53.366292] {"written_at":"2026-08-07T04:45:53.366Z","written_ts":1786077953366000000,"csn_component":"-","correlation_id":"msigp4ye","type":"log","logger":"nodejs-logger","layer":"/Configuration","level":"info","container_id":"10.37.65.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msigp4ye","msg":"No COOKIES environment variable"} (STDOUT, APP/PROC/WEB)#
+#2026 08 07 04:45:56.202#Z#DEBUG#c877912b-921a-11f1-958c-eeee0a8ecd0f.capm-ui#flowable-async-job-executor-thread-8196#
+[PollStartAppStatusExecution] 769d6366-0fbc-4d73-bc5c-74df9ad3912c [2026-08-07T04:45:53.388627] {"written_at":"2026-08-07T04:45:53.388Z","written_ts":1786077953388000000,"csn_component":"-","correlation_id":"msigp4ya","type":"log","logger":"nodejs-logger","layer":"/approuter","level":"info","container_id":"10.37.65.4","component_type":"application","component_id":"769d6366-0fbc-4d73-bc5c-74df9ad3912c","component_name":"capm-ui","component_instance":-1,"source_instance":-1,"organization_id":"1b8c969c-62c3-4820-b2e3-87154633c46a","organization_name":"55c12a3dtrial","space_id":"84ec0a7f-2114-4b2e-9066-83acfca0d054","space_name":"dev","context_id":"msigp4ya","msg":"Application router is listening on port: 8080"} (STDOUT, APP/PROC/WEB)#
