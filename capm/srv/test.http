@@ -22,5 +22,9 @@ DELETE http://localhost:4004/CatalogService/EmployeeSet/16161616-1616-1616-1616-
 
 
 ###test locally with mock strategy
-GET http://localhost:4004/CatalogService/EmployeeSet/$count
+GET http://localhost:4004/CatalogService/EmployeeSet
 Authorization: Basic anitha:
+
+###
+GET http://localhost:4004/CatalogService/EmployeeSet
+Authorization: Basic mithra:

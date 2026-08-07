@@ -13,7 +13,7 @@ service CatalogService @(path:'/CatalogService')
             where: 'bankName = $user.BankName'
         },
         {
-            grant: ['WRITE'],
+            grant: ['WRITE','READ'],
             to: 'Admin'
         }
     ])
