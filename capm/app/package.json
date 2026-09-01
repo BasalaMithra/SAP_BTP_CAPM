@@ -9,7 +9,7 @@
   ],
   "main": "webapp/index.html",
   "dependencies": {
-    "@sap/approuter": "^22.0.3"
+    "@sap/approuter": "^23.0.0"
   },
   "devDependencies": {
     "@sap-ux/eslint-plugin-fiori-tools": "^10.0.0",
